@@ -1035,6 +1035,13 @@
 .steps.lead>li:before{background:var(--r-lead)}.steps.tech>li:before{background:var(--r-tech)}.steps.admin>li:before{background:var(--r-admin)}
 .rh{padding-left:12px;border-left:5px solid;margin-top:26px}.rh.lead{border-color:var(--r-lead);color:var(--r-lead)}.rh.tech{border-color:var(--r-tech);color:var(--r-tech)}.rh.admin{border-color:var(--r-admin);color:var(--r-admin)}
 a.role:hover{filter:brightness(.97)}
+.pg--wf{--blk:var(--ink);--blkdeep:var(--ink);--blktint:#f3eff2}
+.pg--wf th:nth-child(2){color:var(--r-lead)}.pg--wf th:nth-child(3){color:var(--r-tech)}.pg--wf th:nth-child(4){color:var(--r-admin)}
+.pg--wf th:first-child{width:52px}
+.pill--lead{background:var(--r-lead-t);color:var(--purple-deep)}.pill--lead:hover{background:var(--purple-tint-2)}
+.pill--tech{background:var(--r-tech-t);color:var(--phase3-deep)}.pill--tech:hover{background:var(--phase3-tint-2)}
+.pill--admin{background:var(--r-admin-t);color:#14533b}.pill--admin:hover{background:#cfe9dc}
+.pg--wf .kdm::before{content:"↳ ";color:var(--muted)}
 @media(max-width:760px){.roles,.swim{grid-template-columns:1fr}.swim .gap{display:none}.swim .lh{display:none}.journey{grid-template-columns:1fr}.journey .ln,.journey .jh:nth-child(2){display:none}.map5{grid-template-columns:1fr}.tl{display:none}}
 @media print{.sidebar{display:none}}
 </style>
@@ -1138,7 +1145,7 @@ a.role:hover{filter:brightness(.97)}
 <li>Repeat 2–6 for each session (each row of that workshop in the sheet).</li>
 <li>Click <strong>Save changes</strong> (bottom right) and <strong>wait for the panel to close</strong>.</li>
 </ol>
-<div class="check">🔍 <strong>Test straight away</strong> in a private window: the workshop shows <strong>only its session dates</strong>. Every weekday showing? Not saved: save again. No dates? The toggle is still on. Still wrong? Wait 5 minutes and reload.</div>
+<div class="check">🔍 <strong>Test straight away</strong>: open the service's own <strong>Service booking page</strong> link (Services → the workshop → Overview) in a private window. Don't judge by the Bookings calendar: it only shows sessions once someone has booked. The workshop shows <strong>only its session dates</strong>. Every weekday showing? Not saved: save again. No dates? The toggle is still on. Still wrong? Wait 5 minutes and reload.</div>
 </section>
 
 <section id="step-5">
@@ -1232,6 +1239,7 @@ a.role:hover{filter:brightness(.97)}
 <tr><td>Workshop shows no dates</td><td>The service's Default scheduling policy toggle is still on: switch it off</td></tr>
 <tr><td>A change doesn't show</td><td>Save changes and wait for the panel to close · check in a private window · wait 5 minutes</td></tr>
 <tr><td>Session on the wrong day</td><td>Dates may be month/day/year: 12/4/2026 = 4 December</td></tr>
+<tr><td>Service says <em>No upcoming appointments</em> / not in the calendar</td><td>Normal: a session only appears in the Bookings calendar once someone has booked it. Test on the <strong>service booking page</strong> link instead (Services → the workshop → Overview)</td></tr>
 <tr><td>Session missing</td><td>Each session needs its own date range</td></tr>
 <tr><td>Technician's meetings block a slot</td><td>Untick <em>Events on Office calendar affect availability</em> (Step 2)</td></tr>
 </table></div>

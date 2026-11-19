@@ -1035,6 +1035,13 @@
 .steps.lead>li:before{background:var(--r-lead)}.steps.tech>li:before{background:var(--r-tech)}.steps.admin>li:before{background:var(--r-admin)}
 .rh{padding-left:12px;border-left:5px solid;margin-top:26px}.rh.lead{border-color:var(--r-lead);color:var(--r-lead)}.rh.tech{border-color:var(--r-tech);color:var(--r-tech)}.rh.admin{border-color:var(--r-admin);color:var(--r-admin)}
 a.role:hover{filter:brightness(.97)}
+.pg--wf{--blk:var(--ink);--blkdeep:var(--ink);--blktint:#f3eff2}
+.pg--wf th:nth-child(2){color:var(--r-lead)}.pg--wf th:nth-child(3){color:var(--r-tech)}.pg--wf th:nth-child(4){color:var(--r-admin)}
+.pg--wf th:first-child{width:52px}
+.pill--lead{background:var(--r-lead-t);color:var(--purple-deep)}.pill--lead:hover{background:var(--purple-tint-2)}
+.pill--tech{background:var(--r-tech-t);color:var(--phase3-deep)}.pill--tech:hover{background:var(--phase3-tint-2)}
+.pill--admin{background:var(--r-admin-t);color:#14533b}.pill--admin:hover{background:#cfe9dc}
+.pg--wf .kdm::before{content:"↳ ";color:var(--muted)}
 @media(max-width:760px){.roles,.swim{grid-template-columns:1fr}.swim .gap{display:none}.swim .lh{display:none}.journey{grid-template-columns:1fr}.journey .ln,.journey .jh:nth-child(2){display:none}.map5{grid-template-columns:1fr}.tl{display:none}}
 @media print{.sidebar{display:none}}
 </style>
@@ -1070,19 +1077,23 @@ a.role:hover{filter:brightness(.97)}
 
 <section id="workflow">
 <h2 class="section-title">Staff workflow</h2>
-<p>Each workshop passes through three roles in nine steps. The Excel sheet shows where every session is: Status, In Celcat, Bookings.</p>
-<div class="swim">
-<div class="lh lead">Stage 2 Leader</div><div class="lh tech">Technical Coordinator<small>+ Digital Labs technicians</small></div><div class="lh admin">Course Admin support</div>
-<div class="st lead"><b><span class="num">1</span>Propose workshops</b><span>Status: Proposed</span></div><div class="gap"></div><div class="gap"></div>
-<div class="st lead"><b><span class="num">2</span>Share the plan</b><span>Share the Excel sheet</span></div><div class="gap"></div><div class="gap"></div>
-<div class="gap"></div><div class="st tech"><b><span class="num">3</span>Confirm details</b><span>Dates, blurb, location, places → Confirmed</span></div><div class="gap"></div>
-<div class="gap"></div><div class="st tech"><b><span class="num">4</span>Add to Celcat</b><span>Room only · In Celcat: Yes</span></div><div class="gap"></div>
-<div class="gap"></div><div class="gap"></div><div class="st admin"><b><span class="num">5</span>Set up MS Bookings</b><span>Bookings: Live</span></div>
-<div class="st lead"><b><span class="num">6</span>Announce</b><span>Only once Bookings is Live</span></div><div class="gap"></div><div class="gap"></div>
-<div class="gap"></div><div class="st tech"><b><span class="num">7</span>Check sign-ups</b><span>Before the 24-hour reminder · 25% rule</span></div><div class="gap"></div>
-<div class="gap"></div><div class="gap"></div><div class="st admin"><b><span class="num">8</span>Emails go out</b><span>Automatic from MS Bookings</span></div>
-<div class="gap"></div><div class="gap"></div><div class="st admin"><b><span class="num">9</span>Share feedback</b><span>To the Stage 2 Leader and technicians</span></div>
-</div>
+<div class="pg pg--wf"><div class="pg-head"><strong>From plan to feedback</strong><span>9 steps · 3 roles · same every year</span></div><div class="pg-scroll"><table><thead><tr><th>Step</th><th>Stage 2 Leader</th><th>Technical Coordinator + technicians</th><th>Course Admin support</th></tr></thead><tbody>
+<tr class="pg-tt"><td></td><td>The plan · announcements</td><td>Details · Celcat · sign-up check</td><td>MS Bookings · feedback</td></tr>
+<tr class="pg-brk"><td colspan="4">Plan</td></tr>
+<tr class="has"><td class="pg-wk">1</td><td><a class="pill pill--lead" href="#part-lead">Propose workshops<small>Add rows to the Excel · Status: Proposed</small></a></td><td></td><td></td></tr>
+<tr class="has"><td class="pg-wk">2</td><td><a class="pill pill--lead" href="#part-lead">Share the plan<small>Send the Excel sheet</small></a></td><td></td><td></td></tr>
+<tr class="has"><td class="pg-wk">3</td><td></td><td><a class="pill pill--tech" href="#part-tech">Confirm details<small>Date, room, places, description · Status: Confirmed</small></a></td><td></td></tr>
+<tr class="has"><td class="pg-wk">4</td><td></td><td><a class="pill pill--tech" href="#part-tech">Add to Celcat<small>Room only, no student groups · In Celcat: Yes</small></a></td><td></td></tr>
+<tr class="pg-brk"><td colspan="4">Set up</td></tr>
+<tr class="has"><td class="pg-wk">5</td><td></td><td></td><td><a class="pill pill--admin" href="bookings-setup/">Set up MS Bookings<small>One service per workshop · Bookings: Live</small></a></td></tr>
+<tr class="pg-brk"><td colspan="4">Run</td></tr>
+<tr class="has"><td class="pg-wk">6</td><td><a class="pill pill--lead" href="#part-lead">Announce<small>Teams, Moodle, website · only once Live</small></a></td><td></td><td></td></tr>
+<tr class="has"><td class="pg-wk">7</td><td></td><td><a class="pill pill--tech" href="#check">Check sign-ups<small>Before the 24-hour reminder · under 25% may cancel</small></a></td><td><span class="kdm">Co-manages Bookings: either role can make changes</span></td></tr>
+<tr class="has"><td class="pg-wk">8</td><td></td><td></td><td><a class="pill pill--admin" href="#journey">Emails go out<small>Automatic: confirmation, reminder, follow-up</small></a></td></tr>
+<tr class="pg-brk"><td colspan="4">After</td></tr>
+<tr class="has"><td class="pg-wk">9</td><td><span class="kdm">Receives feedback</span></td><td><span class="kdm">Receives feedback</span></td><td><a class="pill pill--admin" href="#part-admin">Share feedback<small>Form responses to the Stage 2 Leader and technicians</small></a></td></tr>
+</tbody></table></div></div>
+<p class="meta-line">Click a step to jump to the details. The Excel sheet shows where every session is: Status, In Celcat, Bookings.</p>
 </section>
 
 <section id="your-part">
